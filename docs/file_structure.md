@@ -2,10 +2,10 @@
 
 The most minimal plugin consists of at least 4 files. 
 
-+ [Lua file](#lua_file)
-+ [Text File](#text_file)
++ [Lua file](#lua-file-)
++ [Text File](#text-file-)
 + [UIX File](#uix_file) 
-+ [plugin.json File](#plugin_json_file) 
++ [plugin.json File](#plugin-json-file-) 
 
 PolyPop will recognize plugins in either:
 
@@ -56,10 +56,12 @@ Used to create properties within the module.
         - `index` - The index of the object(s)
     - `PropertyGroup` - This can be used to group properties
       - `items` - A table of properties.
+      - `ui`
+        - `expand` - Whether this property is expanded or not
     - `Enum` - A drop down of elements to choose from
       - `elements` A table containing the elements to choose from
 - `ui` - A table containing ui variables (these apply to all types
-  - `
+  - `visible` - Whether this propery is visible or not
 
 ### `Instance:onInit(obj)`
 Called when a new instance of this module is created in PolyPop
