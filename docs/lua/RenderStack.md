@@ -1,0 +1,19 @@
+# RenderStack
+
+## areBlendModesSupported (???)
+
+## getCropRectangle (???)
+
+## getDisplay (???)
+
+## getResolution (???)
+
+## getViewPort (???)
+
+## setBlendMode (???)
+
+## setCropRectangle (???)
+
+## setResolution (???)
+
+## setResolutionToCanvas (???)
