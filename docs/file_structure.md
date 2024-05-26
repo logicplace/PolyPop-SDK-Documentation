@@ -4,8 +4,13 @@ The most minimal plugin consists of at least 4 files.
 
 + [Lua file](#lua-file)
 + [Text File](#text-file)
-+ [UIX File](#uix_file)
-+ [plugin.json File](#plugin-json-file)
++ [UIX File](#uix-file)
++ [plugin.json File](#plugin.json-file)
+
+Additional Files and Folders and how they relate to a plugin.
+
++ [.metadata Folder](#.metadata-Folder)
++ [Example_Thumbnail.dds](#Example_Thumbnail.dds)
 
 PolyPop will recognize plugins in either:
 
@@ -18,12 +23,30 @@ Or by default (where plugins are automatically installed)
 ```txt
 ├── PolyPop
 │   ├── Plugins
+|   |   ├──.metadata
+|   │   │   ├── Example
+|   │   │   |   ├──plugin.json
+|   │   │   |   ├──plugin-thumbnail.png
 |   │   ├── Example
 |   │   │   ├── Example.lua
 │   │   │   ├── Example.text
 │   │   │   ├── Example.uix
 │   │   │   ├── plugin.json
+│   │   │   ├── Example_Thumbnail.dds
 ```
+
+## .metadata Folder
+Contains files used to provide a description and image of the plugin seen in the list of plugins within the Polypop UI Plugins Menu.
+
+plugin.json
+Used to describe the plugin itself.  
+It can be the same, and often is, as the [plugin.json](#plugin.json-file) file found in the /Plugins/Example directory.
+
+plugin-thumbnail.png
+The image used in the Plugins Menu.  
+These are mostly 256x256 resolution and png format.
+
+
 
 ## Lua File
 
@@ -253,3 +276,9 @@ This is used to describe the plugin itself. It must be in the root folder of the
     "min_app_version": "1.0"
 }
 ```
+## Example_Thumbnail.dds
+
+This is the image seen in the Library.
+Most are 512x512 resolution, but this also worked with a 256x256 resolution, meaning you could copy the plugin-thumbnail.png and convert it.   BE SURE to use an underscore in the name.
+
+Converting to .dds can be done using any app that supports exporting of that file type.  One lightweight tool capable of .dds exports is [XnView](https://www.xnview.com/en/).
